@@ -12,3 +12,7 @@
 [2023-07-07 20:08:38,137] WARNING deletar_livro() L136  Erro ao deletar livro #'Romeu e Julieta', Livro não encontrado na base :/ - call_trace=C:\Users\felip\Downloads\Projeto\Back-End\app.py L136 
 [2023-07-07 20:08:38,148] INFO _log() L224  127.0.0.1 - - [07/Jul/2023 20:08:38] "[33mDELETE /deletar_livro?nome=Romeu%20e%20Julieta HTTP/1.1[0m" 404 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
 [2023-07-07 20:08:42,029] INFO _log() L224  127.0.0.1 - - [07/Jul/2023 20:08:42] "GET /buscar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-07 20:54:46,850] INFO _log() L224   * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.2:5000 (Press CTRL+C to quit) - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 

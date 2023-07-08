@@ -1,8 +1,8 @@
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import List, Optional
 from model.livro import Livro
 
-from schemas import ComentarioSchema
+from schemas import AvaliacaoSchema
 
 
 class LivroSchema(BaseModel):
@@ -44,15 +44,15 @@ def apresenta_livros(livros: List[Livro]):
 
 
 class LivroViewSchema(BaseModel):
-    """ Define como um livro será retornado: livro + comentários.
+    """ Define como um livro será retornado: livro + avaliação.
     """
     id: int = 1
     nome: str = "Romeu e Julieta"
     genero: str = "Romance"
     quantidade: Optional[int] = 12
     valor: float = 22.50
-    total_cometarios: int = 1
-    comentarios:List[ComentarioSchema]
+    total_avaliacoes: int = 1
+    avaliacoes:List[AvaliacaoSchema]
 
 
 class LivroDelSchema(BaseModel):
@@ -72,6 +72,6 @@ def apresenta_livro(livro: Livro):
         "genero": livro.genero,
         "quantidade": livro.quantidade,
         "valor": livro.valor,
-        "total_cometarios": len(livro.comentarios),
-        "comentarios": [{"texto": c.texto} for c in livro.comentarios]
+        "total_avaliacoes": len(livro.avaliacoes),
+        "avaliacoes": [{"nota": c.nota} for c in livro.avaliacoes]
     }

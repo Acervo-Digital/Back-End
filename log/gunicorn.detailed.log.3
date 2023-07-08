@@ -1,7 +1,4 @@
-[2023-07-08 18:06:30,107] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:06:30] "GET /buscar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:06:42,726] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:06:42] "POST /avaliacao HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:06:50,536] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:06:50] "POST /avaliacao HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:06:56,370] ERROR log_exception() L1449 Exception on /buscar_livro_id [GET] - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py L1449
+[2023-07-08 18:05:22,160] ERROR log_exception() L1449 Exception on /buscar_livro_id [GET] - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py L1449
 Traceback (most recent call last):
   File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -28,8 +25,8 @@ Traceback (most recent call last):
     livro_id = query.id
                ^^^^^^^^
 AttributeError: 'LivroBuscaSchema' object has no attribute 'id'
-[2023-07-08 18:06:56,381] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:06:56] "[35m[1mGET /buscar_livro_id?nome=Romeu%20e%20Julieta HTTP/1.1[0m" 500 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:06:58,424] ERROR log_exception() L1449 Exception on /buscar_livro_id [GET] - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py L1449
+[2023-07-08 18:05:22,181] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:05:22] "[35m[1mGET /buscar_livro_id?nome=Romeu HTTP/1.1[0m" 500 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-08 18:05:24,161] ERROR log_exception() L1449 Exception on /buscar_livro_id [GET] - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py L1449
 Traceback (most recent call last):
   File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -56,11 +53,32 @@ Traceback (most recent call last):
     livro_id = query.id
                ^^^^^^^^
 AttributeError: 'LivroBuscaSchema' object has no attribute 'id'
-[2023-07-08 18:06:58,433] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:06:58] "[35m[1mGET /buscar_livro_id?nome=Romeu%20e%20Julieta HTTP/1.1[0m" 500 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:09:58,900] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:09:58] "GET /buscar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:10:04,629] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:10:04] "GET /buscar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:10:06,783] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:10:06] "GET /buscar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:10:15,503] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:10:15] "POST /cadastrar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:10:16,903] WARNING cadastrar_livro() L55   Erro ao adicionar livro 'Teste', Livro de mesmo nome já salvo na base :/ - call_trace=C:\Users\felip\Downloads\Projeto\Back-End\app.py L55  
-[2023-07-08 18:10:16,904] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:10:16] "[31m[1mPOST /cadastrar_livro HTTP/1.1[0m" 409 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
-[2023-07-08 18:10:20,953] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:10:20] "GET /buscar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-08 18:05:24,167] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:05:24] "[35m[1mGET /buscar_livro_id?nome=1 HTTP/1.1[0m" 500 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-08 18:05:24,714] ERROR log_exception() L1449 Exception on /buscar_livro_id [GET] - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_openapi3\scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+           ^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Projeto\Back-End\app.py", line 95, in buscar_livro_id
+    livro_id = query.id
+               ^^^^^^^^
+AttributeError: 'LivroBuscaSchema' object has no attribute 'id'
+[2023-07-08 18:05:24,724] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:05:24] "[35m[1mGET /buscar_livro_id?nome=1 HTTP/1.1[0m" 500 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 

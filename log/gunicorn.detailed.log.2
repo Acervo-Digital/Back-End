@@ -1,0 +1,89 @@
+[2023-07-08 18:05:43,206] ERROR log_exception() L1449 Exception on /buscar_livro_id [GET] - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_openapi3\scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+           ^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Projeto\Back-End\app.py", line 95, in buscar_livro_id
+    livro_id = query.id
+               ^^^^^^^^
+AttributeError: 'LivroBuscaSchema' object has no attribute 'id'
+[2023-07-08 18:05:43,221] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:05:43] "[35m[1mGET /buscar_livro_id?nome=Romeu%20e%20Julieta HTTP/1.1[0m" 500 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-08 18:05:43,974] ERROR log_exception() L1449 Exception on /buscar_livro_id [GET] - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_openapi3\scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+           ^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Projeto\Back-End\app.py", line 95, in buscar_livro_id
+    livro_id = query.id
+               ^^^^^^^^
+AttributeError: 'LivroBuscaSchema' object has no attribute 'id'
+[2023-07-08 18:05:43,979] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:05:43] "[35m[1mGET /buscar_livro_id?nome=Romeu%20e%20Julieta HTTP/1.1[0m" 500 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-08 18:05:45,297] ERROR log_exception() L1449 Exception on /buscar_livro_id [GET] - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_openapi3\scaffold.py", line 109, in wrapper
+    resp = _do_wrapper(
+           ^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\felip\Downloads\Projeto\Back-End\app.py", line 95, in buscar_livro_id
+    livro_id = query.id
+               ^^^^^^^^
+AttributeError: 'LivroBuscaSchema' object has no attribute 'id'
+[2023-07-08 18:05:45,305] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:05:45] "[35m[1mGET /buscar_livro_id?nome=Romeu%20e%20Julieta HTTP/1.1[0m" 500 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-08 18:06:07,392] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:06:07] "GET /buscar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-08 18:06:08,445] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:06:08] "GET /buscar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-08 18:06:20,536] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:06:20] "POST /cadastrar_livro HTTP/1.1" 200 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 
+[2023-07-08 18:06:21,425] WARNING cadastrar_livro() L55   Erro ao adicionar livro 'Romeu e Julieta', Livro de mesmo nome já salvo na base :/ - call_trace=C:\Users\felip\Downloads\Projeto\Back-End\app.py L55  
+[2023-07-08 18:06:21,425] INFO _log() L224  127.0.0.1 - - [08/Jul/2023 18:06:21] "[31m[1mPOST /cadastrar_livro HTTP/1.1[0m" 409 - - call_trace=C:\Users\felip\Downloads\Pós\desenvolvimento-full-stack\desenvolvimento-full-stack-basico\aula-3\meu_app_api\env\Lib\site-packages\werkzeug\_internal.py L224 

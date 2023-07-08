@@ -1,4 +1,4 @@
-from schemas.comentario import ComentarioSchema
+from schemas.avaliacao import AvaliacaoSchema
 from schemas.livro import LivroSchema, LivroBuscaSchema, LivroViewSchema, \
                             ListagemLivrosSchema, LivroDelSchema, apresenta_livros, \
                             apresenta_livro, apresenta_livros

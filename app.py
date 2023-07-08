@@ -4,7 +4,7 @@ from urllib.parse import unquote
 
 from sqlalchemy.exc import IntegrityError
 
-from model import Session, Livro, Comentario
+from model import Session, Livro, Avaliacao
 from logger import logger
 from schemas import *
 from flask_cors import CORS
@@ -16,7 +16,7 @@ CORS(app)
 # definindo tags
 home_tag = Tag(name="Documentação", description="Seleção de documentação: Swagger, Redoc ou RapiDoc")
 livro_tag = Tag(name="Livro", description="Adição, alteração, visualização e remoção de livros da base")
-comentario_tag = Tag(name="Comentario", description="Adição de um comentário à um livro cadastrado na base")
+avaliacao_tag = Tag(name="Avaliação", description="Adição de uma avaliação à um livro cadastrado na base")
 
 
 @app.get('/', tags=[home_tag])
@@ -92,12 +92,12 @@ def buscar_livro_id(query: LivroBuscaSchema):
 
     Retorna uma representação dos livros e comentários associados.
     """
-    livro_id = query.id
+    livro_id = query.nome
     logger.debug(f"Coletando dados sobre livro #{livro_id}")
     # criando conexão com a base
     session = Session()
     # fazendo a busca
-    livro = session.query(Livro).filter(Livro.id == livro_id).first()
+    livro = session.query(Livro).filter(Livro.nome == livro_id).first()
 
     if not livro:
         # se o livro não foi encontrado
@@ -137,15 +137,15 @@ def deletar_livro(query: LivroBuscaSchema):
         return {"mesage": error_msg}, 404
 
 
-@app.post('/comentario', tags=[comentario_tag],
+@app.post('/avaliacao', tags=[avaliacao_tag],
           responses={"200": LivroViewSchema, "404": ErrorSchema})
-def add_comentario(form: ComentarioSchema):
-    """Adiciona de um novo comentário à um livro cadastrado na base identificado pelo id
+def add_avaliacao(form: AvaliacaoSchema):
+    """Adiciona de uma nova avaliação à um livro cadastrado na base identificado pelo id
 
     Retorna uma representação dos livros e comentários associados.
     """
     livro_id  = form.livro_id
-    logger.debug(f"Adicionando comentários ao livro #{livro_id}")
+    logger.debug(f"Adicionando avaliacao ao livro #{livro_id}")
     # criando conexão com a base
     session = Session()
     # fazendo a busca pelo livro
@@ -154,18 +154,18 @@ def add_comentario(form: ComentarioSchema):
     if not livro:
         # se livro não encontrado
         error_msg = "Livro não encontrado na base :/"
-        logger.warning(f"Erro ao adicionar comentário ao livro '{livro_id}', {error_msg}")
+        logger.warning(f"Erro ao adicionar avaliacao ao livro '{livro_id}', {error_msg}")
         return {"mesage": error_msg}, 404
 
-    # criando o comentário
-    texto = form.texto
-    comentario = Comentario(texto)
+    # criando a nota
+    nota = form.nota
+    avaliacao = Avaliacao(nota)
 
-    # adicionando o comentário ao livro
-    livro.adiciona_comentario(comentario)
+    # adicionando a avaliacao ao livro
+    livro.adiciona_avaliacao(avaliacao)
     session.commit()
 
-    logger.debug(f"Adicionado comentário ao livro #{livro_id}")
+    logger.debug(f"Adicionado avaliacao ao livro #{livro_id}")
 
     # retorna a representação de livro
     return apresenta_livro(livro), 200

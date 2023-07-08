@@ -3,8 +3,7 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from typing import Union
 
-from model import Base, Comentario
-
+from model import Base, Avaliacao
 
 class Livro(Base):
     __tablename__ = 'livro'
@@ -16,11 +15,11 @@ class Livro(Base):
     valor = Column(Float)
     data_insercao = Column(DateTime, default=datetime.now())
 
-    # Definição do relacionamento entre o livro e o comentário.
+    # Definição do relacionamento entre o livro e a avaliacao.
     # Essa relação é implicita, não está salva na tabela 'livro',
     # mas aqui estou deixando para SQLAlchemy a responsabilidade
     # de reconstruir esse relacionamento.
-    comentarios = relationship("Comentario")
+    avaliacoes = relationship("Avaliacao")
 
     def __init__(self, nome:str, genero:str, quantidade:int, valor:float,
                  data_insercao:Union[DateTime, None] = None):
@@ -43,8 +42,8 @@ class Livro(Base):
         if data_insercao:
             self.data_insercao = data_insercao
 
-    def adiciona_comentario(self, comentario:Comentario):
-        """ Adiciona um novo comentário ao livro
+    def adiciona_avaliacao(self, avaliacao:Avaliacao):
+        """ Adiciona uma nova avaliação ao livro
         """
-        self.comentarios.append(comentario)
+        self.avaliacoes.append(avaliacao)
 

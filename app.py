@@ -53,18 +53,18 @@ def cadastrar_livro(form: LivroSchema):
         # como a duplicidade do nome é a provável razão do IntegrityError
         error_msg = "Livro de mesmo nome já salvo na base :/"
         logger.warning(f"Erro ao adicionar livro '{livro.nome}', {error_msg}")
-        return {"mesage": error_msg}, 409
+        return {"message": error_msg}, 409
 
     except Exception as e:
         # caso um erro fora do previsto
         error_msg = "Não foi possível salvar novo item :/"
         logger.warning(f"Erro ao adicionar livro '{livro.nome}', {error_msg}")
-        return {"mesage": error_msg}, 400
+        return {"message": error_msg}, 400
 
 
-@app.get('/buscar_livro', tags=[livro_tag],
+@app.get('/buscar_livros', tags=[livro_tag],
          responses={"200": ListagemLivrosSchema, "404": ErrorSchema})
-def buscar_livro():
+def buscar_livros():
     """Faz a busca por todos os livros cadastrados
 
     Retorna uma representação da listagem de livros.
@@ -103,7 +103,7 @@ def buscar_livro_id(query: LivroBuscaSchema):
         # se o livro não foi encontrado
         error_msg = "Livro não encontrado na base :/"
         logger.warning(f"Erro ao buscar livro '{livro_id}', {error_msg}")
-        return {"mesage": error_msg}, 404
+        return {"message": error_msg}, 404
     else:
         logger.debug(f"Livro econtrado: '{livro.nome}'")
         # retorna a representação de livro
@@ -129,12 +129,12 @@ def deletar_livro(query: LivroBuscaSchema):
     if count:
         # retorna a representação da mensagem de confirmação
         logger.debug(f"Deletado livro #{livro_nome}")
-        return {"mesage": "Livro removido", "id": livro_nome}
+        return {"message": "Livro removido", "id": livro_nome}
     else:
         # se o livro não foi encontrado
         error_msg = "Livro não encontrado na base :/"
         logger.warning(f"Erro ao deletar livro #'{livro_nome}', {error_msg}")
-        return {"mesage": error_msg}, 404
+        return {"message": error_msg}, 404
 
 
 @app.post('/avaliacao', tags=[avaliacao_tag],
@@ -155,7 +155,7 @@ def add_avaliacao(form: AvaliacaoSchema):
         # se livro não encontrado
         error_msg = "Livro não encontrado na base :/"
         logger.warning(f"Erro ao adicionar avaliacao ao livro '{livro_id}', {error_msg}")
-        return {"mesage": error_msg}, 404
+        return {"message": error_msg}, 404
 
     # criando a nota
     nota = form.nota

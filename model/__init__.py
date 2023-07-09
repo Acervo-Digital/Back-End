@@ -5,7 +5,6 @@ import os
 
 # importando os elementos definidos no modelo
 from model.base import Base
-from model.avaliacao import Avaliacao
 from model.livro import Livro
 
 db_path = "database/"

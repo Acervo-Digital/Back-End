@@ -10,6 +10,16 @@ Após clonar o repositório, é necessário ir ao diretório raiz, pelo terminal
 
 > É fortemente indicado o uso de ambientes virtuais do tipo [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html).
 
+Execute o seguinte comando para utilizar o ambiente virtual.
+
+```
+(Unix/macOS)
+$ source env/Scripts/activate
+
+(Windows)
+$ .\env\Scripts\activate
+```
+
 ```
 (env)$ pip install -r requirements.txt
 ```

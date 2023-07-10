@@ -20,6 +20,8 @@ $ source env/Scripts/activate
 $ .\env\Scripts\activate
 ```
 
+Agora, estando no ambiente virtual, execute o comando abaixo
+
 ```
 (env)$ pip install -r requirements.txt
 ```
